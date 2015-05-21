@@ -1,0 +1,79 @@
+table.ambprog_dashboard{
+    color:#2A3333;
+    text-align: left !important;
+}
+table.ambprog_dashboard td, table.ambprog_dashboard th{
+    padding:15px;
+    text-align: left;
+}
+table.ambprog_dashboard th{
+    background:#F5F5F5;
+    font-size: 13px;
+}
+table.ambprog_dashboard tr.pending{
+    color:#CCC;
+}
+
+table.ambprog_dashboard .pending-badge{
+    background-color: #E5E5E5;
+    font-weight: 600!important;
+    color: #555!important;
+    text-transform: uppercase!important;
+    border: 0!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    -o-box-shadow: none!important;
+    box-shadow: none!important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    display: inline-block;
+    font-family: Helvetica, Arial, Sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1em;
+    outline: none;
+    padding: 7px 8px !important;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+table.ambprog_dashboard tr:hover{
+    background:#F5F5F5;
+}
+
+.lead-progress-wrapper {
+  background: #E6E6E6;
+  position: relative;
+  height: 5px;
+  border-radius: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.lead-progress-wrapper>.lead-progress-inner {
+  background: #69D25B;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ambprog_stats_wrap{
+  margin-bottom:20px;
+}
+
+.ambrprog_stat{
+  display: inline-block;
+  margin-right:30px;
+
+}
+
+.ambprog_stat_number{
+  font-size:21px;
+  font-weight: bold;
+}
+.ambprog_register_date{
+  font-size: 10px;
+  font-style: oblique;
+}
