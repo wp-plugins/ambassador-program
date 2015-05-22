@@ -3,6 +3,16 @@
  * Miscellaneus Functions
  */
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+
+/**
+ * Return a 404 when someone tries to access the
+ * project directly
+ * 
+ * @return [type] [description]
+ */
 function ambprog_404_project_single() {
   global $post;
   if ( is_singular( 'ambprog_projects' ) ) {

@@ -3,6 +3,9 @@
  * Commission Functions
  */
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 
 /**
  * Check if project has a commission rate

@@ -3,6 +3,9 @@
  * Registration Functions
  */
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Returns the registration fields
  * 

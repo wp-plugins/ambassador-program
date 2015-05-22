@@ -3,7 +3,15 @@
  * Project Columns
  */
 
-add_filter( 'manage_edit-ambprog_projects_columns', 'ambprog_projects_columns' ) ;
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+
+/**
+ * Add new columns to projects post type
+ * @param  [type] $columns [description]
+ * @return [type]          [description]
+ */
 function ambprog_projects_columns( $columns ) {
 
     $columns = array(
@@ -16,13 +24,20 @@ function ambprog_projects_columns( $columns ) {
 
     return $columns;
 }
+add_filter( 'manage_edit-ambprog_projects_columns', 'ambprog_projects_columns' ) ;
 
 
 
 
 
-add_action( 'manage_ambprog_projects_posts_custom_column', 'manage_ambprog_projects_columns', 10, 2 );
 
+/**
+ * Pull in the post meta for the projects
+ * 
+ * @param  [type] $column  [description]
+ * @param  [type] $post_id [description]
+ * @return [type]          [description]
+ */
 function manage_ambprog_projects_columns( $column, $post_id ) {
     global $post;
 
@@ -67,3 +82,4 @@ function manage_ambprog_projects_columns( $column, $post_id ) {
             break;
     }
 }
+add_action( 'manage_ambprog_projects_posts_custom_column', 'manage_ambprog_projects_columns', 10, 2 );

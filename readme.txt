@@ -3,7 +3,7 @@ Contributors: bryanmonzon
 Tags: ambassadors
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,5 +37,9 @@ Currently, no. I don\'t have a solution for this just yet. I\'m working on some 
 
 
 == Changelog ==
+= 1.1: May 21, 2015 =
+- Added some ABSPATH checks
+- Added/Cleaned up some doc blocks
+
 = 1.0: May 20, 2015 =
 Initial launch

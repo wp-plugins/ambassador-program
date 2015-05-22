@@ -3,9 +3,15 @@
  * User Meta Functions
  */
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-add_action( 'show_user_profile', 'ambprog_ambassador_information_fields' );
-add_action( 'edit_user_profile', 'ambprog_ambassador_information_fields' );
+
+/**
+ * Adds the form fields to the user profile page
+ * @param  [type] $user [description]
+ * @return [type]       [description]
+ */
 function ambprog_ambassador_information_fields( $user ) { 
     if ( !current_user_can( 'manage_options', $user->ID ) )
         return false;
@@ -26,10 +32,16 @@ function ambprog_ambassador_information_fields( $user ) {
 
     </table>
 <?php }
+add_action( 'show_user_profile', 'ambprog_ambassador_information_fields' );
+add_action( 'edit_user_profile', 'ambprog_ambassador_information_fields' );
 
-add_action( 'personal_options_update', 'ambprog_ambassador_information_save_fields' );
-add_action( 'edit_user_profile_update', 'ambprog_ambassador_information_save_fields' );
 
+/**
+ * Update user meta when the user saves their profile
+ * 
+ * @param  [type] $user_id [description]
+ * @return [type]          [description]
+ */
 function ambprog_ambassador_information_save_fields( $user_id ) {
 
     if ( !current_user_can( 'manage_options', $user_id ) )
@@ -38,3 +50,9 @@ function ambprog_ambassador_information_save_fields( $user_id ) {
     /* Copy and paste this line for additional fields. Make sure to change 'ambprog_ambassador_commission' to the field ID. */
     update_user_meta( $user_id, 'ambprog_ambassador_commission', $_POST['ambprog_ambassador_commission'] );
 }
+add_action( 'personal_options_update', 'ambprog_ambassador_information_save_fields' );
+add_action( 'edit_user_profile_update', 'ambprog_ambassador_information_save_fields' );
+
+
+
+

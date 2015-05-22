@@ -3,7 +3,7 @@
  * Plugin Name: Ambassador Program
  * Plugin URI: http://bryanmonzon.com/
  * Description: Build a basic ambassador program for your company or organizations
- * Version: 1.0
+ * Version: 1.1
  * Author: Bryan Monzon
  * Author URI: http://bryanmonzon.com
  */
@@ -65,7 +65,7 @@ final class AMBPROG {
   private function setup_constants() {
     // Plugin version
     if ( ! defined( 'AMBPROG_VERSION' ) )
-      define( 'AMBPROG_VERSION', '1.0' );
+      define( 'AMBPROG_VERSION', '1.1' );
 
     // Plugin Folder Path
     if ( ! defined( 'AMBPROG_PLUGIN_DIR' ) )
